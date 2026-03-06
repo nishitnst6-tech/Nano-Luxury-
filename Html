@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Cart - The Future of Shopping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SVG Definitions -->
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <linearGradient id="silver-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg class="cart-icon" viewBox="0 0 100 100">
+                    <!-- Shopping Cart Icon -->
+                    <path d="M20 30h10l5 40h40l5-35H30" fill="none" stroke="url(#silver-gradient)" stroke-width="3"/>
+                    <circle cx="35" cy="80" r="6" fill="url(#silver-gradient)"/>
+                    <circle cx="75" cy="80" r="6" fill="url(#silver-gradient)"/>
+                    <path d="M15 25h15l5 5h50" stroke="url(#silver-gradient)" stroke-width="3" fill="none"/>
+                    <!-- Speed lines -->
+                    <path d="M5 35h15M5 45h10M5 55h12" stroke="url(#silver-gradient)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <span class="logo-text">NANO CART</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section (Image 3 style - Countdown) -->
+    <section class="hero" id="home">
+        <div class="hero-bg-text">NANO CART</div>
+        <div class="hero-content">
+            <h1 class="hero-title">Nano Cart</h1>
+            <p class="hero-subtitle">Exclusive Sale Ends In</p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">23</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">59</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">29</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            
+            <p class="hero-tagline">Save up to 70% on premium fashion</p>
+        </div>
+        
+        <div class="scroll-indicator" onclick="document.getElementById('slider').scrollIntoView({behavior: 'smooth'})">
+            Scroll down to explore more
+        </div>
+    </section>
+
+    <!-- Hero Slider Section (Image 4 style) -->
+    <section class="hero-slider" id="slider">
+        <div class="slider-bg"></div>
+        <div class="slider-content">
+            <h2 class="slider-title">SEASON SALE</h2>
+            <p class="slider-subtitle">Up to 80% OFF on Premium Fashion</p>
+            <p class="slider-desc">Exclusive deals on luxury brands. Premium quality at unprecedented prices.<br>Limited time offer.</p>
+            <button class="discover-btn">Discover</button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <div class="features-bar">
+        <div class="feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+            Free Shipping
+        </div>
+        <div class="feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            Secure Payment
+        </div>
+        <div class="feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Easy Returns
+        </div>
+        <div class="feature-item">
+            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM12 3v10l3-3h6V3h-9z"/></svg>
+            24/7 Support
+        </div>
+    </div>
+
+    <!-- Featured Collections (Modified Image 2) -->
+    <section class="collections-section" id="collections">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Featured Collections</h2>
+            <p class="section-subtitle">Dare to mix and match! Check our collections to level up your fashion game</p>
+        </div>
+        
+        <div class="collections-grid">
+            <div class="collection-card fade-in">
+                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600" alt="Male Wears">
+                <div class="collection-overlay">
+                    <h3 class="collection-name">Male Wears</h3>
+                    <p class="collection-sub">Modern Essentials</p>
+                </div>
+            </div>
+            
+            <div class="collection-card fade-in">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Female Wears">
+                <div class="collection-overlay">
+                    <h3 class="collection-name">Female Wears</h3>
+                    <p class="collection-sub">Elegant Styles</p>
+                </div>
+            </div>
+            
+            <div class="collection-card fade-in">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Luxury Watches">
+                <div class="collection-overlay">
+                    <h3 class="collection-name">Luxury Watches</h3>
+                    <p class="collection-sub">Timeless Precision</p>
+                </div>
+            </div>
+            
+            <div class="collection-card fade-in">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600" alt="Fitness">
+                <div class="collection-overlay">
+                    <h3 class="collection-name">Fitness</h3>
+                    <p class="collection-sub">Active Lifestyle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section fade-in">
+        <div class="stat-item">
+            <span class="stat-number">4</span>
+            <p class="stat-label">Collections</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">316+</span>
+            <p class="stat-label">Premium Items</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">70%</span>
+            <p class="stat-label">Max Discount</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">24H</span>
+            <p class="stat-label">Fast Delivery</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Premium After-Sales Service</h2>
+            <p class="section-subtitle">We are committed to providing every customer with exceptional shopping experience and comprehensive after-sales support</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">🚚</div>
+                <h3 class="service-title">Free Global Shipping</h3>
+                <p class="service-desc">Free worldwide shipping on orders over $100, delivered within 3-7 business days</p>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">↩️</div>
+                <h3 class="service-title">30-Day Easy Returns</h3>
+                <p class="service-desc">Hassle-free returns within 30 days, just keep original packaging and tags</p>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">🔧</div>
+                <h3 class="service-title">Lifetime Maintenance</h3>
+                <p class="service-desc">Professional leather care and repair services to keep your bags looking new</p>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">✓</div>
+                <h3 class="service-title">Authenticity Guarantee</h3>
+                <p class="service-desc">All products are 100% authentic with official certification and anti-counterfeit labels</p>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">💬</div>
+                <h3 class="service-title">24/7 Customer Service</h3>
+                <p class="service-desc">Professional support team available around the clock for product and order inquiries</p>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">👑</div>
+                <h3 class="service-title">VIP Member Benefits</h3>
+                <p class="service-desc">Exclusive discounts, birthday gifts, and priority access to new collections for members</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <h2 class="support-title">Need Help?</h2>
+        <p class="support-desc">Our professional team is always ready to help ensure you get the best shopping experience</p>
+        <div class="support-options">
+            <div class="support-option">
+                <div class="support-label">Live Chat</div>
+                <div class="support-value">24/7 Online Support</div>
+            </div>
+            <div class="support-option">
+                <div class="support-label">Phone Support</div>
+                <div class="support-value">1-800-NANO-1</div>
+            </div>
+            <div class="support-option">
+                <div class="support-label">Email Support</div>
+                <div class="support-value">service@nanocart.com</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews-section" id="reviews">
+        <h2 class="section-title" style="color: white;">Customer Reviews</h2>
+        
+        <div class="reviews-grid">
+            <div class="review-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Amazing deals! The quality is outstanding and delivery was super fast."</p>
+                <div class="reviewer-name">Sarah Johnson</div>
+                <div class="reviewer-title">Fashion Enthusiast</div>
+            </div>
+            
+            <div class="review-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Best shopping experience ever! The discounts are real and the products are exactly as described."</p>
+                <div class="reviewer-name">Michael Chen</div>
+                <div class="reviewer-title">Regular Customer</div>
+            </div>
+            
+            <div class="review-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"I saved so much money during this sale. Highly recommend this store!"</p>
+                <div class="reviewer-name">Emma Davis</div>
+                <div class="reviewer-title">Style Blogger</div>
+            </div>
+            
+            <div class="review-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Premium quality at unbeatable prices. This is my go-to store for luxury fashion."</p>
+                <div class="reviewer-name">James Wilson</div>
+                <div class="reviewer-title">Fashion Designer</div>
+            </div>
+        </div>
+        
+        <button class="read-more-btn">Read More Reviews</button>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="contact">
+        <div class="newsletter-bg-text">Newsletter</div>
+        <h2 class="newsletter-title">Get Exclusive Access</h2>
+        <p class="newsletter-desc">Be the first to know about flash sales, new arrivals, and VIP-only deals.<br>Subscribe now and get 15% off your first order!</p>
+        
+        <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address">
+            <button type="submit" class="newsletter-btn">Get 15% OFF</button>
+        </form>
+        
+        <p class="newsletter-note">🔒 No spam, unsubscribe anytime &nbsp;&nbsp;|&nbsp;&nbsp; 🎁 Exclusive member deals</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon" style="width: 40px; height: 40px;">
+                        <svg class="cart-icon" viewBox="0 0 100 100">
+                            <path d="M20 30h10l5 40h40l5-35H30" fill="none" stroke="url(#silver-gradient)" stroke-width="3"/>
+                            <circle cx="35" cy="80" r="6" fill="url(#silver-gradient)"/>
+                            <circle cx="75" cy="80" r="6" fill="url(#silver-gradient)"/>
+                            <path d="M15 25h15l5 5h50" stroke="url(#silver-gradient)" stroke-width="3" fill="none"/>
+                            <path d="M5 35h15M5 45h10M5 55h12" stroke="url(#silver-gradient)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text" style="font-size: 20px;">NANO CART</span>
+                </div>
+                <p class="footer-desc">Premium fashion and luxury accessories for the modern lifestyle. Discover our curated collection of handbags, sunglasses, and watches.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">@</a>
+                    <a href="#" class="social-icon">X</a>
+                    <a href="#" class="social-icon">in</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-title">Shop Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Male Wears</a></li>
+                    <li><a href="#">Female Wears</a></li>
+                    <li><a href="#">Watches</a></li>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">All Collections</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-title">Customer Service</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-title">Stay Updated</h4>
+                <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 15px;">Subscribe to get special offers and updates</p>
+                <form style="display: flex;">
+                    <input type="email" placeholder="Enter your email" style="flex: 1; padding: 10px; background: #1a1a1a; border: 1px solid #333; color: white; font-size: 13px;">
+                    <button style="background: var(--primary-red); color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 13px;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nano Cart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
